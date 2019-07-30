@@ -18,6 +18,17 @@
     var canvas = document.getElementById("myCanvas")
     //create the ctx variable, which stores the 2D rendering context
     var ctx = canvas.getContext("2d")
+    //draw lines for tic-tac-toe
+    drawline = (sx, sy, ex, ey) => {
+        ctx.beginPath();
+        ctx.moveTo(sx, sy);
+        ctx.lineTo(ex, ey);
+        ctx.stroke();
+    }
+    drawline(160,0,160,320)
+    drawline(320,0,320,320)
+    drawline(0,106,480,106)
+    drawline(0,212,480,212)
 </script>
 
 </body>
