@@ -15,9 +15,9 @@
 
 <script>
 	// access the canvas element
-    var canvas = document.getElementById("myCanvas")
+    let canvas = document.getElementById("myCanvas")
     //create the ctx variable, which stores the 2D rendering context
-    var ctx = canvas.getContext("2d")
+    let ctx = canvas.getContext("2d")
     //draw lines for tic-tac-toe
     drawline = (sx, sy, ex, ey) => {
         ctx.beginPath();
@@ -29,6 +29,27 @@
     drawline(320,0,320,320)
     drawline(0,106,480,106)
     drawline(0,212,480,212)
+
+    let turn = "X"
+
+    drawBlock = (l,t,r,b) => {
+        ctx.beginPath();
+        ctx.rect(l,t,r,b);
+        ctx.fillStyle = "#FFF"
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    //blocks need to be slightly smaller than the blocks or the lines wont show up
+    drawBlock(0,0,159,105)
+    drawBlock(160, 0, 159, 105)
+    drawBlock(320,0, 159, 105)
+    drawBlock(0, 106, 159, 105)
+    drawBlock(160,106, 159, 105)
+    drawBlock(320, 106, 159, 105)
+    drawBlock(0, 212, 159, 105)
+    drawBlock(160, 212, 159, 105)
+    drawBlock(320, 212, 159, 105)
 </script>
 
 </body>
